@@ -1,27 +1,30 @@
 # hoodbet.fun documentation
 
-Official protocol documentation for HoodBet on Robinhood Chain.
+Welcome to the official HoodBet documentation.
 
-**Live site:** [hoodbet.fun](https://hoodbet.fun) · **dApp:** [app.hoodbet.fun](https://app.hoodbet.fun)
+HoodBet is prize-linked savings on [Robinhood Chain](https://docs.robinhood.com/chain/) — deposit USDG, keep your principal, and compete for daily jackpots powered by Morpho yield and PoolTogether V5.
 
-This repository syncs with [GitBook](https://www.gitbook.com/). Edit markdown here; GitBook publishes automatically when connected.
+## Links
 
-## Repositories
+| Resource | URL |
+|----------|-----|
+| Website | [hoodbet.fun](https://hoodbet.fun) |
+| dApp (HoodPot) | [app.hoodbet.fun](https://app.hoodbet.fun) |
+| GitHub | [github.com/hoodbet-fun](https://github.com/hoodbet-fun) |
+| Explorer | [robinhoodchain.blockscout.com](https://robinhoodchain.blockscout.com) |
 
-| Repo | Purpose |
-|------|---------|
-| [docs](https://github.com/hoodbet-fun/docs) | This documentation (GitBook) |
-| [contracts](https://github.com/hoodbet-fun/contracts) | Smart contracts |
-| [app](https://github.com/hoodbet-fun/app) | HoodPot dApp |
-| [landing](https://github.com/hoodbet-fun/landing) | Marketing site |
-| [bots](https://github.com/hoodbet-fun/bots) | Operational bots |
-| [subgraph](https://github.com/hoodbet-fun/subgraph) | Indexer |
-| [hoodbet](https://github.com/hoodbet-fun/hoodbet) | Monorepo index + PT deploy guide |
+## Who is this for?
 
-## Quick links
+**Users** — start with [What is HoodBet?](user/what-is-hoodbet.md), then [Quick start](user/quick-start.md).
 
-- [Architecture](ARCHITECTURE.md) — system design
-- [Deployment checklist](DEPLOYMENT.md) — launch status
-- [Deploy mainnet](DEPLOY_MAINNET.md) — on-chain steps
-- [Security](SECURITY.md) — audit checklist
-- [Brand Book](BRAND.md) — visual identity
+**Developers & operators** — see the [Developers](developers/architecture.md) section for architecture, deployment, and security.
+
+## How this site works
+
+This repository syncs with [GitBook](https://www.gitbook.com/). Edit markdown on GitHub; GitBook publishes when synced.
+
+## Tagline
+
+**Trade the Future. Own the Outcome.**
+
+Save together. Win together.

@@ -20,9 +20,9 @@
 ## Deploy flow
 
 1. [PT V5 deploy guide](https://github.com/hoodbet-fun/hoodbet/blob/main/pt-deploy/README.md) — PT V5 core
-2. [DEPLOY_MAINNET.md](./DEPLOY_MAINNET.md) — HoodBet contracts
-3. [SAFE_MORPHO_WIRING.md](./SAFE_MORPHO_WIRING.md) — Safe + Morpho
-4. [VIRTUALS.md](./VIRTUALS.md) — $HOOD token
+2. [Deploy mainnet](deploy-mainnet.md) — HoodBet contracts
+3. [Safe + Morpho wiring](safe-morpho-wiring.md) — Safe + Morpho
+4. [Virtuals $HOOD](virtuals.md) — $HOOD token
 5. [Subgraph README](https://github.com/hoodbet-fun/subgraph) — Goldsky
 
 ## HoodBet custom deploy

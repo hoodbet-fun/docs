@@ -3,3 +3,9 @@ root: ./
 structure:
   readme: README.md
   summary: SUMMARY.md
+
+redirects:
+  architecture: developers/architecture.md
+  ARCHITECTURE: developers/architecture.md
+  DEPLOYMENT: developers/deployment.md
+  DEPLOY_MAINNET: developers/deploy-mainnet.md

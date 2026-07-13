@@ -13,7 +13,7 @@
 ## HoodRngBlockhash
 
 - **MVP only** — not production-grade randomness
-- Upgrade to Witnet before high TVL ([RNG.md](./RNG.md))
+- Upgrade to Witnet before high TVL ([RNG](rng.md))
 
 ## HoodPointsRegistry
 
@@ -45,7 +45,7 @@
 
 ## First draw documentation
 
-Record in `docs/DRAWS.md`:
+Record in [draws.md](draws.md):
 - Draw ID, block, random number hash
 - Winners, prize amounts
 - Explorer links
