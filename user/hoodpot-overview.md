@@ -37,6 +37,8 @@ This rewards loyal depositors over flash deposits right before a draw.
 - **Draw period:** 24 hours (`86400` seconds)
 - **Tiers:** 4 prize tiers (including a grand prize every ~91 draws)
 - **Prize token:** USDG
+- **Current prize pool:** $10 USDG (launch seed + organic growth)
+- **First draw:** 20 July 2026
 
 A permissionless draw bot triggers each draw after the period ends. Randomness is provided by an on-chain RNG (see [Odds & fairness](odds-and-fairness.md)).
 
@@ -56,7 +58,7 @@ Deposit USDG → PrizeVault → Morpho vault (yield)
 
 | Field | Value |
 |-------|-------|
-| HoodPot PrizeVault | `0x318b89c2b407f091adcbc02854dd3f96e3470e17` |
+| HoodPot PrizeVault | `0x11da9bE66d20328c6eA16d52079890322fA90f24` |
 | Morpho vault `hoodbet.fun` | `0xDF06045aBAE69d6e73a7F0197FED917032d22194` |
 | Asset | USDG |
 

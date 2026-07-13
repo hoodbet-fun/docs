@@ -13,11 +13,11 @@ The Morpho vault already exists on mainnet:
 | Asset | USDG (`0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168`, 6 decimals) |
 | Performance fee | 50% |
 | Management fee | ~5% APR |
-| TVL | ~**$1 USDG** (`totalAssets = 1_000_000`, 6 decimals) |
-| Fee recipients | Safe `0x5FF989aCB81e612fb54d2BDE9C6334B4C9a8f117` |
-| Owner | Same Safe |
+| TVL | Grows with deposits (Morpho `totalAssets`) |
+| Fee recipients | `HoodFeeHarvester` → `PrizePool` |
+| Owner | Safe `0x5FF989aCB81e612fb54d2BDE9C6334B4C9a8f117` |
 
-Governance and fee routing are centralized in the Safe until PrizePool + factories are deployed.
+**Live HoodPot stack** deployed July 2026 — see [Contract addresses](../user/contract-addresses.md).
 
 ---
 
@@ -72,11 +72,11 @@ Longer/larger deposits → higher odds. Vaults that contributed more yield → l
 | Morpho curator fees | 50% perf + 5% mgmt shares minted to recipient | `HoodFeeHarvester` redeems → `PrizePool.contributePrizeTokens` |
 | Residual vault yield | Share price growth in PrizeVault wrapper | `TpdaLiquidationPair` Dutch auction |
 
-After deployment, the Safe should:
+Completed via Safe batches ([safe-morpho-wiring.md](safe-morpho-wiring.md)):
 
-1. Set Morpho `performanceFeeRecipient` and `managementFeeRecipient` to `HoodFeeHarvester` (timelocked).
-2. Deploy `PrizeVault` via `PrizeVaultFactory` pointing at the existing Morpho vault.
-3. Wire liquidation pair + claimer.
+1. Morpho `performanceFeeRecipient` and `managementFeeRecipient` → `HoodFeeHarvester`
+2. `PrizeVault` deployed via `PrizeVaultFactory` → Morpho vault
+3. Liquidation pair + claimer wired; prize pool seeded ($10 USDG)
 
 ### Prize token choice
 
@@ -97,7 +97,7 @@ Robinhood Chain has [Chainlink price feeds](https://docs.robinhood.com/chain/ora
 | Witnet | Low if supported | Check Robinhood support |
 | Bridged L1 RNG | High latency | Fallback only |
 
-Implement `IRng` adapter wrapping Chainlink VRF, wired to `DrawManager`.
+**MVP:** `HoodRngBlockhash` (`0x8B6E…Dd19`) — upgrade to Chainlink VRF before high TVL ([rng.md](rng.md)).
 
 ### Governance
 
@@ -113,30 +113,23 @@ Implement `IRng` adapter wrapping Chainlink VRF, wired to `DrawManager`.
 ## Deployment order (Robinhood Chain)
 
 ```
-Phase 0 — Prerequisites
-  ✓ Morpho vault deployed (hoodbet.fun)
-  ✓ USDG on chain
-  □ Chainlink VRF subscription
+Phase 0 — Prerequisites                    ✓
+  Morpho vault, USDG, Safe
 
-Phase 1 — Core hyperstructure (fork pt-v5-mainnet)
-  1. TwabController
-  2. PrizePool (drawPeriodSeconds=86400, tiers=4, prizeToken=USDG)
-  3. ChainlinkVrfRng + DrawManager
-  4. Claimer + ClaimerFactory
-  5. TpdaLiquidationPairFactory + Router
-  6. PrizeVaultFactory
+Phase 1 — Core hyperstructure              ✓
+  TwabController, PrizePool, DrawManager,
+  HoodRngBlockhash (MVP), Claimer, TPDA, PrizeVaultFactory
 
-Phase 2 — hoodbet integration
-  7. HoodFeeHarvester(prizePool, morphoVault, usdg)
-  8. PrizeVaultFactory.deployVault(..., morphoVault, ...)
-  9. TpdaLiquidationPair for new PrizeVault
-  10. Safe: point Morpho fee recipients → HoodFeeHarvester
+Phase 2 — hoodbet integration              ✓
+  HoodFeeHarvester, HoodPot PrizeVault,
+  Safe wiring, Morpho fees + collateral caps
 
-Phase 3 — Operations
-  11. Seed PrizeVault yield buffer (~$0.10 USDG)
-  12. Run liquidation / draw / claim bots
-  13. Deploy pt-v5-subgraph for Robinhood
-  14. Launch apps/web + full dApp
+Phase 3 — Operations                       ✓ (MVP)
+  Yield buffer, bots, Goldsky subgraph, app + landing
+  Virtuals $HOOD + HoodPointsRegistry
+
+Phase 4 — Before scale                     □
+  Chainlink VRF RNG, formal audit, HoodStats / HoodCrew
 ```
 
 ---
@@ -189,7 +182,7 @@ flowchart TB
     subgraph Core
         PP[PrizePool]
         DM[DrawManager]
-        RNG[Chainlink VRF]
+        RNG[HoodRngBlockhash / VRF]
         CL[Claimer]
     end
 

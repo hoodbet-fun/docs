@@ -1,5 +1,7 @@
 # hoodbet.fun deployment checklist
 
+Last updated after mainnet launch (July 2026).
+
 ## Current on-chain state (mainnet)
 
 | Item | Status |
@@ -7,37 +9,59 @@
 | Morpho vault `hoodbet.fun` | Live |
 | USDG asset | Live |
 | Safe as owner + fee recipient | Live |
-| HoodPot PrizeVault | Live — `0x318b89…0e17` |
+| HoodPot PrizeVault | Live — `0x11da9b…0f24` (yield buffer 0.5 USDG) |
 | Prize pool + DrawManager | Live |
+| Prize pool balance | **$10 USDG** (Safe seed) |
 | HoodFeeHarvester | Live — wired to PrizeVault |
+| Liquidation pair + router | Live |
+| Morpho fee recipients | Done (harvester) |
+| Morpho collateral caps | Done (syrupUSDG, USDe, spUSDG) |
 | HoodRngBlockhash | Live (MVP — upgrade before high TVL) |
-| Morpho fees → HoodFeeHarvester | **Pending Safe action** |
-| HoodPointsRegistry | Pending $HOOD token |
-| Subgraph Goldsky | Scaffold ready |
-| Bots | Scaffold ready |
+| $HOOD token (Virtuals) | Live — `0x3b4b…D43e` |
+| HoodPointsRegistry | Live — `0x7EBb…0901` |
+| Subgraph (Goldsky) | Live |
+| Bots (draw / claim / liquidation) | Deployed — Oracle VPS |
 | Formal security audit | **Not completed** |
 
-## Deploy flow (completed + remaining)
+Deprecated vault `0x318b…0e17` (`yieldBuffer = 0`) — do not use.
 
-1. ~~Prize pool core~~ — done
-2. ~~HoodPot PrizeVault + HoodFeeHarvester~~ — done
-3. [Safe + Morpho wiring](safe-morpho-wiring.md) — **next**
-4. [Virtuals $HOOD](virtuals.md) — $HOOD token
-5. [Subgraph README](https://github.com/hoodbet-fun/subgraph) — Goldsky
-6. [Security checklist](security.md) — audit + RNG upgrade before scale
+## Deploy flow
 
-## HoodBet custom deploy
+| Step | Status |
+|------|--------|
+| Prize pool core (PT V5) | Done |
+| HoodPot PrizeVault + HoodFeeHarvester | Done |
+| Safe wiring (liquidation + harvester) | Done |
+| Morpho fee recipients | Done |
+| Morpho collateral caps | Done |
+| Virtuals $HOOD | Done |
+| HoodPointsRegistry | Done |
+| Prize pool seed ($10) | Done |
+| Subgraph Goldsky | Done |
+| Bots on VPS | Done |
+| RNG upgrade (VRF) | Before high TVL |
+| Formal audit | Before scale |
 
-```bash
-cd contracts
-export SAFE_OWNER=0x5FF989aCB81e612fb54d2BDE9C6334B4C9a8f117
-export PRIZE_POOL=0x14e5004a757a85439fc379c8acd5b3b3cdf47344
-# forge script or cast send --create (chain 4663)
-```
+## Operations
+
+| Bot | Role | Notes |
+|-----|------|-------|
+| `hoodbet-draw` | Hourly cron — start/finish draws | Active after 20 Jul 2026 |
+| `hoodbet-claim` | Scan winners, `claimPrizes` | Idle until first draw |
+| `hoodbet-liquidation` | Harvest Morpho fees + TPDA swaps | Harvest runs always; swap needs USDG in bot wallet |
+
+Repo: [github.com/hoodbet-fun/bots](https://github.com/hoodbet-fun/bots)
 
 ## Frontend deploy
 
-| URL | Directory |
-|-----|-------------|
-| hoodbet.fun | `landing/` |
-| app.hoodbet.fun | `app/` |
+| URL | Repo |
+|-----|------|
+| [hoodbet.fun](https://hoodbet.fun) | `landing/` |
+| [app.hoodbet.fun](https://app.hoodbet.fun) | `app/` |
+
+## Related
+
+- [Safe + Morpho wiring](safe-morpho-wiring.md)
+- [Virtuals $HOOD](virtuals.md)
+- [Security checklist](security.md)
+- [Draw log](draws.md)

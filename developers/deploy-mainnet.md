@@ -1,44 +1,51 @@
 # HoodBet mainnet deploy runbook
 
-Execute via Safe `0x5FF989aCB81e612fb54d2BDE9C6334B4C9a8f117`.
+**Status:** Core deploy complete on Robinhood Chain (4663). This page is the operator reference for what was deployed and how to extend it.
 
-## 1. HoodBet custom contracts
+Safe owner: `0x5FF989aCB81e612fb54d2BDE9C6334B4C9a8f117`
+
+## Live addresses
+
+See [Contract addresses](../user/contract-addresses.md) for the canonical list.
+
+| Contract | Address |
+|----------|---------|
+| HoodPot PrizeVault | `0x11da9bE66d20328c6eA16d52079890322fA90f24` |
+| PrizePool | `0x14e5004a757a85439fc379c8acd5b3b3cdf47344` |
+| HoodFeeHarvester | `0x7FB9C432e78101a6bB59e681458888acaA3db532` |
+| $HOOD token | `0x3b4b9E8982449aa6712F0d13162252A4a871D43e` |
+| HoodPointsRegistry | `0x7EBb6063C98e2D9faAD4C67A99d6A259f7810901` |
+
+## HoodPointsRegistry (deployed)
 
 ```bash
 cd contracts
+export HOOD_TOKEN=0x3b4b9E8982449aa6712F0d13162252A4a871D43e
 export SAFE_OWNER=0x5FF989aCB81e612fb54d2BDE9C6334B4C9a8f117
-export PRIZE_POOL=0x14e5004a757a85439fc379c8acd5b3b3cdf47344
-export HOOD_TOKEN=<after Virtuals tokenize>
-forge script script/DeployCore.s.sol \
+forge script script/DeployHoodPointsRegistry.s.sol \
   --rpc-url https://rpc.mainnet.chain.robinhood.com \
-  --broadcast \
-  --verify --verifier blockscout \
-  --verifier-url https://robinhoodchain.blockscout.com/api/
+  --broadcast
 ```
 
-## 2. Prize pool core
+Deploy tx block: `8787024`.
 
-Follow the [prize core deploy guide](https://github.com/hoodbet-fun/hoodbet/blob/main/pt-deploy/README.md). Record addresses in [contracts/config/robinhood.json](https://github.com/hoodbet-fun/contracts/blob/main/config/robinhood.json) → `deployed`.
+## Prize pool seed (optional)
 
-## 3. PrizeVault
+Safe batches in [pt-deploy/safe](https://github.com/hoodbet-fun/hoodbet/tree/main/pt-deploy/safe):
 
-```text
-PrizeVaultFactory.deployVault(
-  name: "HoodPot USDG",
-  symbol: "hpUSDG",
-  yieldVault: 0xDF06045aBAE69d6e73a7F0197FED917032d22194,
-  prizePool: <PrizePool>,
-  ...
-  owner: Safe
-)
-```
+| Batch | Amount |
+|-------|--------|
+| `hoodpot-seed-10-usdg.batch.json` | $10 USDG |
+| `hoodpot-seed-100-usdg.batch.json` | $100 USDG |
 
-## 4. Wire HoodFeeHarvester
+Import in Safe Transaction Builder → sign → execute. Credits `PrizePool.contributePrizeTokens` for the HoodPot vault.
 
-```solidity
-harvester.setPrizeVault(<PrizeVault>);
-```
+## Verify on Blockscout
 
-## 5. Verify on Blockscout
+https://robinhoodchain.blockscout.com
 
-All contracts at https://robinhoodchain.blockscout.com
+## Related
+
+- [Deployment checklist](deployment.md)
+- [Safe + Morpho wiring](safe-morpho-wiring.md)
+- [Virtuals $HOOD](virtuals.md)

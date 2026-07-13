@@ -8,6 +8,8 @@
 | Prize tiers | 4 |
 | Grand prize frequency | ~every 91 draws |
 | Prize token | USDG |
+| First draw opens | **20 July 2026** |
+| Current prize pool | **$10 USDG** (Safe seed + grows from yield) |
 
 ## How a draw works
 
@@ -19,19 +21,27 @@
 
 All steps are on-chain and auditable on [Blockscout](https://robinhoodchain.blockscout.com).
 
+## How the prize pool grows
+
+| Source | Mechanism |
+|--------|-----------|
+| **Vault yield** | Yield above the 0.5 USDG buffer → TPDA liquidation → prize pool |
+| **Morpho fees** | 50% performance + 5% management → `HoodFeeHarvester` → prize pool |
+| **Governance seed** | Optional Safe `contributePrizeTokens` (e.g. $10 launch seed) |
+
+With low TVL, organic growth is slow. More deposits → more yield → faster jackpot growth.
+
 ## Claiming prizes
 
 1. Open [app.hoodbet.fun](https://app.hoodbet.fun) → **Prizes** tab
 2. If you won, click **Claim prize**
 3. Confirm the transaction — USDG is sent to your wallet
 
-Permissionless **claim bots** can also claim on your behalf (incentivized by the protocol).
+The dApp shows **To claim** with your unclaimed total. Permissionless **claim bots** can also claim on your behalf.
 
 ## Prize history
 
-Public draw records are published in the [Draws log](../developers/draws.md) after launch.
-
-A **HoodStats** dashboard (roadmap Q4 2026) will show live winners, odds, and jackpot history.
+Public draw records: [Draws log](../developers/draws.md)
 
 ## Multiple tiers
 

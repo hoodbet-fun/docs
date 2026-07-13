@@ -40,6 +40,8 @@ Go to **[app.hoodbet.fun](https://app.hoodbet.fun)**.
 
 The longer you keep USDG deposited, the more your **time-weighted balance** grows — and the better your draw odds.
 
+**First draw:** 20 July 2026. Prize pool starts at $10 USDG and grows from vault yield.
+
 ## What's next?
 
 - [Deposits](deposits.md) — detailed deposit flow

@@ -4,6 +4,8 @@ Welcome to the official HoodBet documentation.
 
 HoodBet is prize-linked savings on [Robinhood Chain](https://docs.robinhood.com/chain/) — deposit USDG, keep your principal, and compete for daily jackpots powered by Morpho yield and HoodPot.
 
+**Status (July 2026):** HoodPot is live on mainnet. Prize pool seeded at **$10 USDG**. First draw opens **20 July 2026**. dApp: [app.hoodbet.fun](https://app.hoodbet.fun).
+
 ## Links
 
 | Resource | URL |

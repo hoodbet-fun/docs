@@ -25,6 +25,12 @@ More deposit + longer duration = better odds. There is **no guarantee** of winni
 | Withdraw mid-period | TWAB drops for remaining time |
 | Hold steady | Maximum TWAB for your deposit size |
 
+## Before the first draw (20 July 2026)
+
+The dApp may show **Your odds —** until the draw period is active and TWAB is recorded on-chain. This is expected.
+
+If you already deposited, your **position** (vault balance) is tracked. Once draws begin, TWAB will reflect how long you've been in the pool. A large share of total TVL → very high odds in early draws.
+
 ## Randomness
 
 Draws use on-chain randomness via the protocol's RNG adapter.

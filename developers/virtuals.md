@@ -6,21 +6,17 @@ HoodBet agent token launches via [Virtuals Protocol](https://www.virtuals.io/) o
 
 ## Steps
 
-1. Create HoodBet agent on Virtuals (EconomyOS / ACP CLI)
-2. Verify chain support:
-   ```bash
-   acp chain list --json
-   ```
-3. Tokenize:
-   ```bash
-   acp agent tokenize --chain-id 4663 --symbol HOOD --json
-   ```
-4. Record token address in `contracts/config/robinhood.json` → `tokens.hood`
-5. Deploy `HoodPointsRegistry`:
-   ```bash
-   export HOOD_TOKEN=0x...
-   forge script script/DeployCore.s.sol --rpc-url $RH_RPC --broadcast
-   ```
+1. ~~Create HoodBet agent on Virtuals~~ — done
+2. ~~Tokenize on chain 4663~~ — `0x3b4b9E8982449aa6712F0d13162252A4a871D43e`
+3. ~~Record token address~~ — `contracts/config/robinhood.json`
+4. ~~Deploy `HoodPointsRegistry`~~ — `0x7EBb6063C98e2D9faAD4C67A99d6A259f7810901`
+
+Deploy script (reference):
+
+```bash
+export HOOD_TOKEN=0x3b4b9E8982449aa6712F0d13162252A4a871D43e
+forge script script/DeployHoodPointsRegistry.s.sol --rpc-url $RH_RPC --broadcast
+```
 
 ## Post-launch
 

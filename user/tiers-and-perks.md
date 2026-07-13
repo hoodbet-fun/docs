@@ -25,7 +25,7 @@ When connected, [app.hoodbet.fun](https://app.hoodbet.fun) shows your tier badge
 
 ## Thresholds (on-chain)
 
-Configured in `contracts/config/robinhood.json`:
+Configured on-chain in `HoodPointsRegistry` (`0x7EBb6063C98e2D9faAD4C67A99d6A259f7810901`):
 
 ```
 Scout:  0
