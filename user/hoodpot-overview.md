@@ -1,6 +1,6 @@
 # How HoodPot works
 
-HoodPot combines **Morpho vault yield** with **PoolTogether V5** prize mechanics.
+HoodPot combines **Morpho vault yield** with **on-chain prize pool** mechanics.
 
 ## No-loss savings
 
@@ -21,7 +21,7 @@ Two funding streams feed the jackpot:
 | **Morpho curator fees** | 50% performance fee + ~5% APR management fee on the `hoodbet.fun` vault |
 | **Vault yield** | Residual share-price growth liquidated into the prize pool |
 
-Fees are routed through `HoodFeeHarvester` into the PoolTogether prize pool after deployment.
+Fees are routed through `HoodFeeHarvester` into the HoodPot prize pool.
 
 ## Time-weighted average balance (TWAB)
 
@@ -52,17 +52,15 @@ Deposit USDG → PrizeVault → Morpho vault (yield)
             Daily draw → Winners claim
 ```
 
-## Morpho vault (live today)
-
-The underlying Morpho vault is already deployed:
+## Live contracts
 
 | Field | Value |
 |-------|-------|
-| Name | `hoodbet.fun` |
-| Address | `0xDF06045aBAE69d6e73a7F0197FED917032d22194` |
+| HoodPot PrizeVault | `0x318b89c2b407f091adcbc02854dd3f96e3470e17` |
+| Morpho vault `hoodbet.fun` | `0xDF06045aBAE69d6e73a7F0197FED917032d22194` |
 | Asset | USDG |
 
-The full HoodPot experience (PrizeVault wrapper + draws) activates once PoolTogether V5 core contracts are deployed. See [Contract addresses](contract-addresses.md).
+See [Contract addresses](contract-addresses.md) for the full list.
 
 ## Related
 

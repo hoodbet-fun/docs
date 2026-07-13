@@ -35,10 +35,6 @@ There is **no minimum lock period**. You can withdraw at any time. However, with
 - Larger deposits increase your proportional chance (not a guarantee)
 - Verify the transaction on [Blockscout](https://robinhoodchain.blockscout.com)
 
-## Deployment status
-
-If the dApp shows **"PrizeVault pending deploy"**, the PoolTogether PrizeVault wrapper is not yet live. The Morpho vault accepts curator configuration but the full no-loss lottery path requires core PT deployment. Track progress in [Contract addresses](contract-addresses.md).
-
 ## Related
 
 - [Withdrawals](withdrawals.md)

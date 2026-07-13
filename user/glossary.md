@@ -3,11 +3,11 @@
 | Term | Definition |
 |------|------------|
 | **HoodBet** | The protocol brand — prize-linked savings and future prediction products on Robinhood Chain |
-| **HoodPot** | The no-loss savings lottery product (PoolTogether V5 + Morpho) |
+| **HoodPot** | The no-loss savings lottery product (Morpho yield + on-chain prize pool) |
 | **USDG** | Stablecoin deposited into HoodPot (6 decimals) |
 | **TWAB** | Time-Weighted Average Balance — measures deposit duration × amount for draw odds |
 | **PrizeVault** | ERC-4626 wrapper that tracks TWAB and forwards assets to Morpho |
-| **PrizePool** | PoolTogether contract holding prize liquidity and running tiered draws |
+| **PrizePool** | On-chain contract holding prize liquidity and running tiered draws |
 | **Draw** | A 24-hour cycle ending in an on-chain random winner selection |
 | **Tier** | Prize level (4 tiers + grand prize cadence) |
 | **Morpho** | DeFi lending protocol; curates the `hoodbet.fun` vault |

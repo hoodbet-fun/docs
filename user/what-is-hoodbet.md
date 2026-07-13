@@ -18,7 +18,7 @@ You don't bet against the house. You save together and win together.
 | Layer | Role |
 |-------|------|
 | [Morpho](https://morpho.org/) | Curated ERC-4626 vault (`hoodbet.fun`) earns yield on USDG |
-| [PoolTogether V5](https://dev.pooltogether.com/protocol/design/) | No-loss prize pool, TWAB odds, tiered draws |
+| [HoodPot prize engine](hoodpot-overview.md) | No-loss prize pool, TWAB odds, tiered draws |
 | [Robinhood Chain](https://docs.robinhood.com/chain/) | EVM L2 (chain ID `4663`) |
 | Safe multisig | Protocol governance and fee routing |
 

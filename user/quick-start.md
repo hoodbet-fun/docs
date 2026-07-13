@@ -36,8 +36,6 @@ Go to **[app.hoodbet.fun](https://app.hoodbet.fun)**.
 3. Open the **Deposit** tab
 4. Enter an amount and confirm the transaction
 
-> **Note:** Full PrizeVault deposits require the PoolTogether V5 core to be deployed. If the app shows "PrizeVault pending deploy", the Morpho vault exists but the prize wrapper is not live yet. Check [Deployment status](contract-addresses.md).
-
 ## 5. Stay in the pool
 
 The longer you keep USDG deposited, the more your **time-weighted balance** grows — and the better your draw odds.

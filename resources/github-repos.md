@@ -10,7 +10,7 @@ All HoodBet code is open source under [github.com/hoodbet-fun](https://github.co
 | [landing](https://github.com/hoodbet-fun/landing) | Marketing site (hoodbet.fun) |
 | [bots](https://github.com/hoodbet-fun/bots) | Draw, liquidation, claim bots |
 | [subgraph](https://github.com/hoodbet-fun/subgraph) | Goldsky subgraph extensions |
-| [hoodbet](https://github.com/hoodbet-fun/hoodbet) | Monorepo index + PT V5 deploy guide |
+| [hoodbet](https://github.com/hoodbet-fun/hoodbet) | Monorepo index + prize core deploy guide |
 
 ## Contributing
 
@@ -20,6 +20,6 @@ All HoodBet code is open source under [github.com/hoodbet-fun](https://github.co
 
 For documentation edits, PRs to [hoodbet-fun/docs](https://github.com/hoodbet-fun/docs) sync to GitBook automatically when connected.
 
-## PoolTogether upstream
+## Prize pool upstream
 
-Core PoolTogether V5 contracts are deployed from [GenerationSoftware](https://github.com/GenerationSoftware) repositories. See [hoodbet/pt-deploy](https://github.com/hoodbet-fun/hoodbet/blob/main/pt-deploy/README.md).
+Core prize pool contracts were deployed from audited open-source repositories (GenerationSoftware `pt-v5-*`). HoodBet branding and operator docs refer to this stack as **HoodPot**. See [hoodbet/pt-deploy](https://github.com/hoodbet-fun/hoodbet/blob/main/pt-deploy/README.md) for deploy details.

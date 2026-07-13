@@ -7,7 +7,7 @@ Execute via Safe `0x5FF989aCB81e612fb54d2BDE9C6334B4C9a8f117`.
 ```bash
 cd contracts
 export SAFE_OWNER=0x5FF989aCB81e612fb54d2BDE9C6334B4C9a8f117
-export PRIZE_POOL=<after PT deploy>
+export PRIZE_POOL=0x14e5004a757a85439fc379c8acd5b3b3cdf47344
 export HOOD_TOKEN=<after Virtuals tokenize>
 forge script script/DeployCore.s.sol \
   --rpc-url https://rpc.mainnet.chain.robinhood.com \
@@ -16,9 +16,9 @@ forge script script/DeployCore.s.sol \
   --verifier-url https://robinhoodchain.blockscout.com/api/
 ```
 
-## 2. PT V5 core
+## 2. Prize pool core
 
-Follow the [PT V5 deploy guide](https://github.com/hoodbet-fun/hoodbet/blob/main/pt-deploy/README.md). Record addresses in [contracts/config/robinhood.json](https://github.com/hoodbet-fun/contracts/blob/main/config/robinhood.json) → `deployed`.
+Follow the [prize core deploy guide](https://github.com/hoodbet-fun/hoodbet/blob/main/pt-deploy/README.md). Record addresses in [contracts/config/robinhood.json](https://github.com/hoodbet-fun/contracts/blob/main/config/robinhood.json) → `deployed`.
 
 ## 3. PrizeVault
 

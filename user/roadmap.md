@@ -15,7 +15,7 @@ HoodPot is the first product. The full HoodBet vision spans savings, stats, soci
 
 ## HoodPot (live build)
 
-- No-loss savings lottery (PoolTogether V5 + Morpho)
+- No-loss savings lottery (Morpho + HoodPot prize engine)
 - Daily draws in USDG
 - [hoodbet.fun](https://hoodbet.fun) landing + [app.hoodbet.fun](https://app.hoodbet.fun) dApp
 - $HOOD tiers via Virtuals

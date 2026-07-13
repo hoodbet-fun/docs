@@ -6,13 +6,14 @@
 
 ## No-loss ≠ no risk
 
-PoolTogether's "no-loss" model means your **principal is not intentionally spent on prizes**. It does **not** eliminate all risk.
+HoodPot's "no-loss" model means your **principal is not intentionally spent on prizes**. It does **not** eliminate all risk.
 
 ## Smart contract risk
 
-- Bugs in HoodBet, PoolTogether, Morpho, or dependency contracts could cause loss
+- Bugs in HoodBet, Morpho, prize pool, or dependency contracts could cause loss
 - Immutable misconfiguration at deploy cannot be reversed
 - Contracts are open source but **not formally audited** for mainnet launch
+- **No protocol is "unhackable"** — assume residual exploit risk until independently audited
 
 ## Market & vault risk
 

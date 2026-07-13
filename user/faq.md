@@ -8,7 +8,7 @@ No. HoodPot is **prize-linked savings** — you don't buy losing tickets. Your U
 
 ### Can I lose my deposit?
 
-Under normal operation, **no** — that's the PoolTogether no-loss model. Smart contract, market, and vault risks still apply. Read [Risks & disclaimer](risks.md).
+Under normal operation, **no** — that's the HoodPot no-loss model. Smart contract, market, and vault risks still apply. Read [Risks & disclaimer](risks.md).
 
 ### What chain is HoodBet on?
 
@@ -32,9 +32,9 @@ Every **24 hours**.
 
 You can claim on the dApp **Prizes** tab, or a permissionless claim bot may claim for you.
 
-### Why does the app say "PrizeVault pending deploy"?
+### Why can't I deposit?
 
-The Morpho vault is live, but the PoolTogether PrizeVault wrapper is not yet deployed. Full lottery functionality activates after core PT V5 deployment.
+Check that your wallet is on Robinhood Chain (4663), you have USDG and ETH for gas, and you're using [app.hoodbet.fun](https://app.hoodbet.fun). See [Contract addresses](contract-addresses.md) if you need to verify HoodPot is live.
 
 ## $HOOD
 

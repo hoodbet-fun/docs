@@ -2,7 +2,7 @@
 
 ## Executive summary
 
-**hoodbet.fun** forks the [PoolTogether V5 hyperstructure](https://dev.pooltogether.com/protocol/design/) on Robinhood Chain (EVM L2, chain ID `4663`, Arbitrum Orbit). Depositors put USDG into a Morpho ERC-4626 vault; time-weighted balances determine lottery odds; yield and curator fees fund the prize pool.
+**hoodbet.fun** runs a **V5 prize pool hyperstructure** on Robinhood Chain (EVM L2, chain ID `4663`, Arbitrum Orbit). Depositors put USDG into a Morpho ERC-4626 vault; time-weighted balances determine lottery odds; yield and curator fees fund the prize pool.
 
 The Morpho vault already exists on mainnet:
 
@@ -21,9 +21,9 @@ Governance and fee routing are centralized in the Safe until PrizePool + factori
 
 ---
 
-## PoolTogether V5 model (what we fork)
+## Prize pool model (HoodPot engine)
 
-PoolTogether is **prize-linked savings**: depositors never lose principal; yield is auctioned into a shared prize pool; random draws pick winners proportional to time-weighted deposits.
+HoodPot is **prize-linked savings**: depositors never lose principal; yield is auctioned into a shared prize pool; random draws pick winners proportional to time-weighted deposits.
 
 ### Core contracts
 
@@ -36,7 +36,7 @@ DrawManager             → RNG auction + awardDraw()
 Claimer (VRGDA)         → bots claim prizes for winners
 ```
 
-Canonical source lives under [GenerationSoftware](https://github.com/GenerationSoftware) (`pt-v5-*`), not the mostly-empty `pooltogether/v5-*` mirrors.
+Canonical upstream source lives under [GenerationSoftware](https://github.com/GenerationSoftware) (`pt-v5-*`) — deployed as HoodPot on Robinhood Chain.
 
 ### User flow
 
@@ -136,7 +136,7 @@ Phase 3 — Operations
   11. Seed PrizeVault yield buffer (~$0.10 USDG)
   12. Run liquidation / draw / claim bots
   13. Deploy pt-v5-subgraph for Robinhood
-  14. Launch apps/web + full dApp (fork pooltogether-client-monorepo)
+  14. Launch apps/web + full dApp
 ```
 
 ---
@@ -213,6 +213,6 @@ flowchart TB
 |-----------|--------|
 | **hoodbet.fun** | ✅ Used for Morpho vault name |
 | hoodlottery | Alternative brand |
-| hoodtogether.fun | Nod to PoolTogether |
+| hoodtogether.fun | Alternative brand (community savings) |
 
 Recommended public brand: **hoodbet.fun** with tagline *"Save together. Win together."*

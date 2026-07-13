@@ -22,7 +22,6 @@
 
 | Resource | URL |
 |----------|-----|
-| PoolTogether V5 design | https://dev.pooltogether.com/protocol/design/ |
 | Morpho | https://morpho.org/ |
 | Virtuals Protocol | https://www.virtuals.io/ |
 | Virtuals agent token docs | https://os.virtuals.io/agent-identity/token/overview |

@@ -38,10 +38,10 @@ Fairness · Trasparenza · Divertimento · Accessibilità · Community
 - "Tu" e "noi"
 - *"Non scommettere alla cieca. Scommetti con HoodBet."*
 
-## Copy — PoolTogether → HoodBet
+## Copy — legacy prize pool → HoodBet
 
-| PoolTogether | HoodBet |
-|--------------|---------|
+| Legacy term | HoodBet |
+|-------------|---------|
 | Prize Pool | HoodPot |
 | Save & Win | Deposita. Gioca. Vinci. |
 | Deposit | Entra nel gioco |

@@ -2,7 +2,7 @@
 
 Welcome to the official HoodBet documentation.
 
-HoodBet is prize-linked savings on [Robinhood Chain](https://docs.robinhood.com/chain/) — deposit USDG, keep your principal, and compete for daily jackpots powered by Morpho yield and PoolTogether V5.
+HoodBet is prize-linked savings on [Robinhood Chain](https://docs.robinhood.com/chain/) — deposit USDG, keep your principal, and compete for daily jackpots powered by Morpho yield and HoodPot.
 
 ## Links
 

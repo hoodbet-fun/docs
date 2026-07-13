@@ -35,7 +35,7 @@ A **HoodStats** dashboard (roadmap Q4 2026) will show live winners, odds, and ja
 
 ## Multiple tiers
 
-PoolTogether V5 uses **tiered prizes**:
+HoodPot uses **tiered prizes**:
 
 - Smaller tiers pay out more frequently
 - The grand tier pays larger prizes less often
