@@ -6,7 +6,7 @@
 |----------|-----|
 | Website | https://hoodbet.fun |
 | dApp | https://app.hoodbet.fun |
-| Documentation | https://hoodbet-fun.gitbook.io |
+| Documentation | https://hoodbet.gitbook.io/hoodbet-docs |
 | GitHub | https://github.com/hoodbet-fun |
 
 ## Infrastructure
