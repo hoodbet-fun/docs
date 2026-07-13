@@ -4,7 +4,14 @@ Robinhood Chain mainnet — chain ID **4663**.
 
 Explorer: [robinhoodchain.blockscout.com](https://robinhoodchain.blockscout.com)
 
-## Live today
+## Policy: real tokens only
+
+All production configs use **verified mainnet contracts** on Robinhood Chain (4663):
+
+- **USDG** `0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168` — deposit asset, prize token, stake-to-win asset
+- **Morpho vault** `0xDF06045aBAE69d6e73a7F0197FED917032d22194` — HoodPot yield vault
+
+Do **not** use `0x000…000` or mock tokens. `$HOOD` is added only after the real Virtuals launch — HoodPointsRegistry deploys with `HOOD_TOKEN=<real address>` only.
 
 | Contract | Address | Status |
 |----------|---------|--------|
