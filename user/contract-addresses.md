@@ -32,8 +32,8 @@ Do **not** use `0x000…000` or mock tokens. `$HOOD` is added only after the rea
 | PrizePool | — | Pending |
 | DrawManager | — | Pending |
 | PrizeVault | — | Pending |
-| HoodFeeHarvester | — | Ready to deploy |
-| HoodRngBlockhash | — | Ready to deploy |
+| HoodRngBlockhash | `0x8B6EdfeCe14210eCb2A8D28F333D81621103Dd19` | Live |
+| HoodFeeHarvester | — | Pending PrizePool |
 | HoodPointsRegistry | — | Pending $HOOD token |
 | $HOOD token | — | Pending Virtuals launch |
 
