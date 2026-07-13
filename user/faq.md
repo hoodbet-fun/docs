@@ -62,4 +62,6 @@ A public **Safe multisig** (`0x5FF9…f117`) for governance and fee routing. Cor
 
 ## Support
 
-This is experimental DeFi. No official customer support channel yet. For bugs, open an issue on the relevant [GitHub repo](https://github.com/hoodbet-fun).
+Community: [HoodBet.fun Official on Telegram](https://t.me/+8KdjgSVzZr5hZjc0).
+
+For bugs, open an issue on the relevant [GitHub repo](https://github.com/hoodbet-fun).

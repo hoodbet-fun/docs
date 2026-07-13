@@ -10,6 +10,7 @@ HoodBet is prize-linked savings on [Robinhood Chain](https://docs.robinhood.com/
 |----------|-----|
 | Website | [hoodbet.fun](https://hoodbet.fun) |
 | dApp (HoodPot) | [app.hoodbet.fun](https://app.hoodbet.fun) |
+| Telegram | [HoodBet.fun Official](https://t.me/+8KdjgSVzZr5hZjc0) |
 | GitHub | [github.com/hoodbet-fun](https://github.com/hoodbet-fun) |
 | Explorer | [robinhoodchain.blockscout.com](https://robinhoodchain.blockscout.com) |
 

@@ -7,6 +7,7 @@
 | Website | https://hoodbet.fun |
 | dApp | https://app.hoodbet.fun |
 | Documentation | https://hoodbet.gitbook.io/hoodbet-docs |
+| Telegram | https://t.me/+8KdjgSVzZr5hZjc0 |
 | GitHub | https://github.com/hoodbet-fun |
 
 ## Infrastructure
