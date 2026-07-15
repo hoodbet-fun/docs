@@ -27,7 +27,7 @@ Do **not** use `0x000…000` or mock tokens.
 | PrizeVaultFactory | `0xa81b8281586115a228763a584734325beb71e5c2` |
 | **HoodPot PrizeVault** | `0x11da9bE66d20328c6eA16d52079890322fA90f24` |
 | HoodRngBlockhash | `0x8B6EdfeCe14210eCb2A8D28F333D81621103Dd19` |
-| HoodFeeHarvester | `0x7FB9C432e78101a6bB59e681458888acaA3db532` |
+| HoodFeeHarvester | `0x3632Dd39B2717602fB4d7f79D001c3a51625159d` |
 | Claimer | `0x71ec0971e8f8e35568a4bbe0fc118e6ca0ebe707` |
 | **$HOOD token** | `0x3b4b9E8982449aa6712F0d13162252A4a871D43e` |
 | **HoodPointsRegistry** | `0x7EBb6063C98e2D9faAD4C67A99d6A259f7810901` |
@@ -47,6 +47,7 @@ Do **not** use `0x000…000` or mock tokens.
 | Contract | Address | Note |
 |----------|---------|------|
 | HoodPot PrizeVault (old) | `0x318b89c2b407f091adcbc02854dd3f96e3470e17` | `yieldBuffer = 0` — do not use |
+| HoodFeeHarvester (old) | `0x7FB9C432e78101a6bB59e681458888acaA3db532` | Broken PT V5 contribute path — do not use |
 
 ### Subgraph (Goldsky)
 

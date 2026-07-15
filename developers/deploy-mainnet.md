@@ -12,7 +12,7 @@ See [Contract addresses](../user/contract-addresses.md) for the canonical list.
 |----------|---------|
 | HoodPot PrizeVault | `0x11da9bE66d20328c6eA16d52079890322fA90f24` |
 | PrizePool | `0x14e5004a757a85439fc379c8acd5b3b3cdf47344` |
-| HoodFeeHarvester | `0x7FB9C432e78101a6bB59e681458888acaA3db532` |
+| HoodFeeHarvester | `0x3632Dd39B2717602fB4d7f79D001c3a51625159d` |
 | $HOOD token | `0x3b4b9E8982449aa6712F0d13162252A4a871D43e` |
 | HoodPointsRegistry | `0x7EBb6063C98e2D9faAD4C67A99d6A259f7810901` |
 
