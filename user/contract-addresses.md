@@ -36,10 +36,12 @@ Do **not** use `0x000…000` or mock tokens.
 
 | Parameter | Value |
 |-----------|-------|
-| Prize pool balance | **$10 USDG** (Safe seed; grows from yield + fees) |
+| Prize pool balance | **$10 USDG** (Safe seed) |
+| Prize pool status | **Shut down** since 17 September 2026, 22:00 UTC (`isShutdown()` = `true`) |
 | `firstDrawOpensAt` | **20 July 2026** |
 | Draw period | 24 hours |
 | PrizeVault `yieldBuffer` | 0.5 USDG |
+| PrizeVault `maxDeposit` | `0` (deposits closed) |
 | Completed draws | `0` |
 
 ### Deprecated

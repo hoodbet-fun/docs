@@ -1,6 +1,6 @@
 # Safe + Morpho vault wiring
 
-**Status:** HoodFeeHarvester v2 deployed — **Safe batch pending** (`hoodpot-harvester-v2.batch.json`).
+**Status:** HoodFeeHarvester v2 deployed and wired — `hoodpot-harvester-v2.batch.json` has been executed.
 
 Safe: https://app.safe.global/home?safe=robinhood:0x5FF989aCB81e612fb54d2BDE9C6334B4C9a8f117
 
@@ -15,7 +15,7 @@ Import JSON from [pt-deploy/safe](https://github.com/hoodbet-fun/hoodbet/tree/ma
 
 | Batch | Purpose |
 |-------|---------|
-| `hoodpot-harvester-v2.batch.json` | **Pending** — wire v2 harvester + Morpho fee recipients |
+| `hoodpot-harvester-v2.batch.json` | Executed — wire v2 harvester + Morpho fee recipients |
 | `hoodpot-wiring.batch.json` | Liquidation pair + `harvester.setPrizeVault` (v1) |
 | `hoodpot-morpho-fees.batch.json` | Morpho `submit` + execute fee recipients (v1) |
 | `morpho-collateral-caps.batch.json` | Collateral caps (syrupUSDG, USDe, spUSDG) |
@@ -29,10 +29,10 @@ Morpho Vault V2 curator functions require `submit(bytes)` before execution. Dire
 
 - [x] Liquidation pair wired to PrizeVault
 - [x] Collateral caps set for syrupUSDG, USDe, spUSDG
-- [ ] `hoodpot-harvester-v2.batch.json` executed on Safe
-- [ ] `performanceFeeRecipient` = HoodFeeHarvester v2
-- [ ] `managementFeeRecipient` = HoodFeeHarvester v2
-- [ ] `harvester.prizeVault()` = HoodPot PrizeVault (v2)
+- [x] `hoodpot-harvester-v2.batch.json` executed on Safe
+- [x] `performanceFeeRecipient` = HoodFeeHarvester v2
+- [x] `managementFeeRecipient` = HoodFeeHarvester v2
+- [x] `harvester.prizeVault()` = HoodPot PrizeVault
 
 ## Ongoing
 

@@ -9,10 +9,10 @@ Last updated after mainnet launch (July 2026).
 | Morpho vault `hoodbet.fun` | Live |
 | USDG asset | Live |
 | Safe as owner + fee recipient | Live |
-| HoodPot PrizeVault | Live — `0x11da9b…0f24` (yield buffer 0.5 USDG) |
-| Prize pool + DrawManager | Live |
+| HoodPot PrizeVault | Deployed — `0x11da9b…0f24` (yield buffer 0.5 USDG); deposits closed (`maxDeposit` = 0) |
+| Prize pool + DrawManager | Prize pool **shut down** since 17 September 2026 (no draw awarded) |
 | Prize pool balance | **$10 USDG** (Safe seed) |
-| HoodFeeHarvester | Live — wired to PrizeVault |
+| HoodFeeHarvester | v2 `0x3632…159d` — wired to PrizeVault |
 | Liquidation pair + router | Live |
 | Morpho fee recipients | Done (harvester) |
 | Morpho collateral caps | Done (syrupUSDG, USDe, spUSDG) |
